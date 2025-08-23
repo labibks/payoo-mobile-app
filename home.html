@@ -12,7 +12,7 @@
     <!-- font awesome cdn -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-[#f4f5f7] h-[100vh]">
+<body class="bg-[#f4f5f7] ">
     <section class="main bg-white rounded-b-2xl max-w-lg mx-auto">
         <div class="container   flex justify-between items-center  border-b-1 border-gray-300 p-5">
         <div class="nav-left flex">
@@ -42,11 +42,11 @@
             <img class="w-6 mx-auto" src="./assets/send1.png" alt="">
             <h2>Cashout</h2>
         </div>
-        <div class="card border-1 border-gray-200 text-center pt-3">
+        <div id="transfer-mony-btn" class="card border-1 border-gray-200 text-center pt-3">
             <img class="w-6 mx-auto" src="./assets/money1.png" alt="">
             <h2>Transfer Mony</h2>
         </div>
-        <div class="card border-1 border-gray-200 text-center pt-3">
+        <div id="get-bonus-btn" class="card border-1 border-gray-200 text-center pt-3">
             <img class="w-6 mx-auto" src="./assets/bonus1.png" alt="">
             <h2>Get Bonus</h2>
         </div>
@@ -63,7 +63,7 @@
     </section>
     <section class="all-form-section max-w-lg mx-auto">
     <!-- add mony form here -->
-        <div id="add-mony-parent" class="add-mony-form-parent  mt-5  ">
+    <div id="add-mony-parent" class="add-mony-form-parent  mt-5  ">
         <h2 class=" font-bold mb-3 ml-4 ">Add Mony</h2>
         <form  class="bg-white p-8 rounded-2xl ">
             <div>
@@ -110,6 +110,39 @@
             </div>
             <button id="withdraw-btn"  class="btn w-full bg-[#0874F2] text-white mt-3.5 rounded-2xl">Withdraw Money</button>
         </form>
+    </div>
+    <!-- transfer mony form here -->
+    <div id="transfer-mony-parent" style="display: none;">
+       <h1 class="my-5 font-bold ml-4">Transfer Mony</h1>
+        <form  class="bg-white p-8 rounded-2xl ">
+        
+            <div class="mt-4">
+                <h2  class="mb-2 font-semibold">User Account Number</h2>
+                <input id="user-number" type="text" placeholder="Enter 11 digit account number" class="input w-full rounded-2xl bg-[#f4f5f7]" />
+            </div>
+            <div class="mt-4">
+                <h2 class="mb-2 font-semibold">Amount</h2>
+                <input id="transfer-amount" type="text" placeholder="Enter amount to transfer" class="input w-full rounded-2xl bg-[#f4f5f7]" />
+            </div>
+            <div class="mt-4">
+                <h2 class="mb-2 font-semibold">Pin Number</h2>
+                <input id="transfer-pin" type="text" placeholder="Enter 4 digit pin number" class="input w-full rounded-2xl bg-[#f4f5f7]" />
+            </div>
+            <button id="transfer-button" class="btn w-full bg-[#0874F2] text-white mt-3.5 rounded-2xl">Send Now</button>
+        </form>
+
+    </div>
+    <!-- get bonus cupon here -->
+    <div id="get-bonus-parent" style="display: none;">
+        <h1 class="my-5 font-bold ml-4">Get Bonus</h1>
+        <form  class="bg-white p-8 rounded-2xl ">
+            <div class="mt-4">
+                <h2 class="mb-2 font-semibold">Enter Bonus Coupon</h2>
+                <input id="transfer-pin" type="text" placeholder="Enter your coupon" class="input w-full rounded-2xl bg-[#f4f5f7]" />
+            </div>
+            <button id="bonus-button" class="btn w-full bg-[#0874F2] text-white mt-3.5 rounded-2xl">Get Bonus</button>
+        </form>
+
     </div>
     </section>
     <script src="home.js"></script>
